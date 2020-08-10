@@ -1,0 +1,2 @@
+Select lc.id,lcl.title,fk_status,fklibrary_category from library_category lc
+	left join library_category_language lcl on lc.id = lcl.fk_library_category and lcl.fk_language = 1;
