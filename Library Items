@@ -1,0 +1,5 @@
+Select li.id,c.title,c2.title,lil.title,li.fk_status from library_item li 
+    left join library_item_language lil on li.id = lil.fk_library_item and lil.fk_language = 1
+    left join library_category lc on lc.id = li.fk_library_category
+    left join library_category_language c on c.fk_library_category = li.fk_library_category and c.fk_language = 1
+    left join library_category_language c2 on c2.fk_library_category = lc.fklibrary_category and c2.fk_language = 1;
