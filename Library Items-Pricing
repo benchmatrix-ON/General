@@ -1,0 +1,4 @@
+Select li.id,AVG(i.price),MAX(i.PRICE),MIN(i.PRICE),AVG(i.COST),MAX(i.COST),MIN(i.COST) from item i
+	left join library_item li on i.fk_library_item = li.id
+where i.fk_status = 3 and li.fk_status = 3
+group by li.id
